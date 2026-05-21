@@ -36,6 +36,8 @@ La aplicación implementa componentes reutilizables, manejo de estado con hooks,
 - Renderizado dinámico de productos
 - Cambio dinámico de estilos
 
+---
+
 ## Instalación
 
 Clonar repositorio:
