@@ -56,7 +56,7 @@ const styleButton: CSSProperties = {
 export function MyAwesomeApp({ name, lastName }: Props) {
   return (
     <>
-      <h1>{name}</h1>
+      <h1 data-testid="name-title">{name}</h1>
       <h3>{lastName}</h3>
 
       <p>{juegosFavoritos.join(', ')}</p>

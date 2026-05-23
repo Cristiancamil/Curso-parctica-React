@@ -1,0 +1,67 @@
+######################################################################################################################
+Tipos de pruebas:
+
+  Pruebas Unitarias:
+  Se enfocan en probar funciones, métodos etc. Valida que cada unidad funcione correctamente 
+  de manera individual.
+
+  Pruebas de Integración:
+  Se enfocan en verificar la interacción entre múltiples módulos, funciones o componentes. 
+  Valida que diferentes partes del sistema se comuniquen correctamente.
+
+  Pruebas End-to-End (E2E):
+  Se enfoca en probar flujos completos de la aplicación simulando el comportamiento real del usuario. 
+  Validar que todo el sistema funcione correctamente desde el inicio hasta el final.
+
+
+######################################################################################################################
+Patrón AAA:
+  El patron AAA (Arrange, Act, Assert) es una metodología que se utiliza para organizar pruebas de software 
+  de manera clara y mantenible .
+
+
+######################################################################################################################
+Configuración Vitest:
+  Instalar librería vitest:
+  - npm install -D vitest
+
+  Agregar los scripts al package.json:
+  - "vitest": "vitest"
+  - "vitest:ui": "vitest --ui"
+  - "coverage": "vitest run --coverage"
+
+
+######################################################################################################################
+Configurar React Testing Library:
+  Instalar librería React Testing Library:
+  - npm install --save-dev @testing-library/react @testing-library/dom @types/react @types/react-dom
+
+  Agregar linea de importación a vite.config.ts:
+  - import { defineConfig } from 'vitest/config'
+
+  Añadir el script de configuración en la función defineCinfig, debajo de plugin: 
+  - test: {
+    environment: "jsdom", 
+    globals: true
+  }
+
+  Ejecutar el comando "npm run test" y presionar la tecla y para que se instalen las dependencias.
+
+
+######################################################################################################################
+Testear comonentes de React:
+  Renderizar el HTML de un componente:
+  - render(<MyComponent />)
+  - screen.debug()
+
+  Acceder al contenido de una etiqueta HTML por el Id:
+  - render(<MyComponent/>)
+  - const h1 = screen.getByTestId('nameId')
+  - expect(h1?.innerHTML).toContain('Cristian')
+
+  Acceder al contenido de una etiqueta HTML del componente:
+  - const { container } = render(<MyComponent />)
+  - const h1 = container.querySelector('h1')
+  - expect(h1?.inerHTML).toContain('Cristian)
+
+

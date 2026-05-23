@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > should match snapshots 1`] = `
+<div>
+  <h1
+    data-testid="name-title"
+  >
+    Cristian
+  </h1>
+  <h3>
+    Lopez
+  </h3>
+  <p>
+    Halo, Gear of War, Need for Speed, Call Of Duty
+  </p>
+  <button
+    style="background-color: green; padding: 4px; border-radius: 4px; width: 100px;"
+  >
+    Activo
+  </button>
+  <p>
+    {"codigoPostal":"08001","ciudad":"Soledad","country":"Colombia"}
+  </p>
+</div>
+`;
