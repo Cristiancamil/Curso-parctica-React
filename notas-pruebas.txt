@@ -85,3 +85,8 @@ Testear comonentes de React:
   Obtener botones del componente:
   - const [button] = screen.getAllByRole('button')
   - fireEvent.click(button)
+
+  Componentes ficticios:
+  - vi.mock('ruta_component', () => ({
+      Component: () => <div data-testid="Component"/>
+    }))
