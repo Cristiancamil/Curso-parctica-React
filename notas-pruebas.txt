@@ -64,4 +64,24 @@ Testear comonentes de React:
   - const h1 = container.querySelector('h1')
   - expect(h1?.inerHTML).toContain('Cristian)
 
+  SnapShots:
+  Toma una foto del resultado esperado cuando el código tiene muchas líneas y ayuda cuando se hacen cambios
+  no intencionales.
+  - const { container } = render(<MyComponent />)
+  - expect(container).toMatchSnapshots()
 
+  Métodos de validación en las pruebas:
+  - .toBe(): valida igualdad estricta.
+  - .toEqual(): valida igualdad profunda de objetos o arreglos.
+  - .toContain(): verifica si un arreglo o string contiene un valor.
+  - .toHaveLenght(): verifica el tamaño de un arreglo o string.
+  - .toBeTruthy(): valida que un valor sea true.
+  - .toBeFalsy(): valida que un valor sea falso.
+  - .toBeDefined(): valida que una variable esté definida.
+  - .toBeUndefined(): valida que un valor sea undefined.
+  - .not.toBeNull(): valida que un valor no sea null.
+  - .toThrow(): valida que una función lance un error.
+
+  Obtener botones del componente:
+  - const [button] = screen.getAllByRole('button')
+  - fireEvent.click(button)

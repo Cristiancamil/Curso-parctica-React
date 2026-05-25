@@ -51,6 +51,9 @@ export const ItemCounter = ({ name, quantity }: Props) => {
    * Decrementa el contador en 1 unidad.
    */
   const handleSubtract = () => {
+    if (count === 1)
+      return
+
     setCount(count - 1)
   }
 
